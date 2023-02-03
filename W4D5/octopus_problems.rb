@@ -1,4 +1,6 @@
-# arr = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh']
+FISH = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh']
+TILES = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
+
 
 def sluggish_octopus(arr)
   biggest_fish = ""
@@ -39,7 +41,24 @@ def merge_fish(left, right)
   merged + left + right
 end
 
+def longest_quad_fish(arr)
+  return dominant_octopus(arr)[-1]
+end
 
 def clever_octopus(arr)
+  biggest_fish = ""
+  arr.each { |fish| biggest_fish = fish if biggest_fish.length < fish.length }
+  biggest_fish
+end
 
+# -------
+
+def slow_dance(dir, tiles)
+  tiles.each_with_index { |tile, i| return i if tile == dir }
+end
+
+def constant_dance(dir, tiles)
+  tile_hash = {}
+  tiles.each_with_index { |tile, i| tile_hash[tile] = i }
+  return tile_hash[dir]
 end
