@@ -1,0 +1,14 @@
+<section class="cat-index-holder">
+    <h1>These are our kitties</h1>
+
+  <section class="cat-index">
+    <% @cats.each do |cat| %>
+    <div class="cat-index-item">
+      <div>
+        <img src="https://cdn131.picsart.com/327783181046201.jpg?type=webp&to=crop&r=256">
+        <br>
+        <a href="<%= cat_url(cat.id) %>">Adopt <%= cat.name %></a>
+      </div>
+    </div>
+    <% end %>
+</section>

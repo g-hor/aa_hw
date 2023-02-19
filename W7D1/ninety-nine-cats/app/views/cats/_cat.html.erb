@@ -1,0 +1,35 @@
+<section class="page">
+  <div class="centered-box">
+    <img src="https://cdn-cbeko.nitrocdn.com/YAysSGytvxeVxHWdRPueSoYmAixjAhdB/assets/static/optimized/rev-3ae8250/wp-content/uploads/2013/09/fallling-asleep-at-keyboard-cat.jpg">
+    <h1><%= cat.name %></h1>
+
+    <table>
+      <tbody>
+        <tr>
+          <th><%= cat.name %>'s traits:</th>
+          <th>values</th>
+        </tr>
+        <tr>
+          <td>age</td>
+          <td><%= cat.age %> old</td>
+        </tr>
+
+        <% unprinted = ["created_at", "updated_at", "name", "description", "id"] %>
+        <% cat.attributes.each do |attribute, val| %>
+          <% unless unprinted.include?(attribute) %>
+        <tr>
+          <td><%= attribute %></td>
+          <td><%= val %></td>
+        </tr>
+          <% end %>
+        <% end %>
+        <tr>
+          <th colspan="2">description</th>
+        </tr>
+        <tr>
+          <td colspan="2"><%= cat.description %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

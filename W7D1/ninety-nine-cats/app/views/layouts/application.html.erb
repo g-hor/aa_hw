@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Look at All of Our Kitties! uwu</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+  </head>
+
+  <body>
+    <nav class="top-nav">
+      <h1>
+        <a href="<%= cats_url %>">ninety-nine kitty cats</a>
+      </h1>
+      <div>
+          <a href="<%= cats_url %>/new">add a kitty</a>
+            logout
+      </div>
+    </nav>
+    <section class="page">
+      <%= yield %>
+    </section>
+  </body>
+</html>
