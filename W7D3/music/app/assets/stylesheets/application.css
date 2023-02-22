@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  font-family: Luminari;
+}
+
+h1 {
+  font-family: Baskerville serif;
+  font-size: 36px;
+  color: white;
+}
+
+nav {
+  background-color: rgb(72, 62, 50);
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logged {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-items: center; */
+  width: 300px;
+}
+
+a:link {
+  color: rgb(235, 235, 175);
+  background-color: black;
+  border-radius: 25%;
+  text-decoration: none;
+  font-family: inherit;
+  padding: 15px 25px;
+}
+
+a:visited {
+  color: rgb(204, 158, 166);
+  background-color: black;
+  border-radius: 25%;
+  text-decoration: none;
+  font-family: inherit;
+  padding: 15px 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
