@@ -15,7 +15,7 @@
   <br>
   
   <label for="cat_color">Color</label>
-  <select name="cat[color]" id="cat_color">
+  <!--select name="cat[color]" id="cat_color">
     <option disabled <%= cat.color ? "" : "selected" %>>-- select a color --</option>
     <option value="black" <%= cat.color == "black" ? "selected" : "" %>> black </option>
     <option value="white" <%= cat.color == "white" ? "selected" : "" %>> white </option>
@@ -29,8 +29,15 @@
     <option value="gray" <%= cat.color == "gray" ? "selected" : "" %>> gray </option>
     <option value="bald" <%= cat.color == "bald" ? "selected" : "" %>> bald </option>
     <option value="transparent" <%= cat.color == "transparent" ? "selected" : "" %>> transparent </option>
-  </select>
+  </select-->
   <br>
+
+  <select name="cat[color]" id="cat_color">
+    <option disabled <%= cat.color ? "" : "selected" %>>-- select a color --</option>
+    <% Cat::CAT_COLORS.each do |color| %>
+      <option value="<%= color %>" <%= cat.color == color ? "selected" : "" %>><%= color %></option>
+    <% end %>
+  </select>
 
   <input type="radio" name="cat[sex]" value="F" id="cat_sex_female" value="<%= cat.sex %>"
     <%= cat.sex == "F" ? "checked" : "" %>>

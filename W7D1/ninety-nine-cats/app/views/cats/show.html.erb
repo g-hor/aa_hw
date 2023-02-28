@@ -1,1 +1,9 @@
 <%= render 'cats/cat', cat: @cat %>
+
+<a href="<%= edit_cat_url(@cat) %>">whats wrong with this kitty tho</a>
+
+<form action="<%= edit_cat_url(@cat) %>" method="GET">
+  <button>click teh button to do things</button>
+  <input type="submit" value="submit to the kitty">
+
+</form>
