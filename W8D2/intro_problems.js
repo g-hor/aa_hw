@@ -50,11 +50,19 @@ function isPrime(num) {
 // }
 
 function sumOfNPrimes(n) {
-  const primes = []
-  for (let i = 0; i < n; i++) {
-    
+  let sum = 0;
+  let count = 0;
+  for (let i = 2; count < n; i++) {
+    if (isPrime(i)) {
+      sum += i;
+      count++;
+    }
   }
 }
+
+// function sumOfNPrimes(n) {
+
+// }
 
 
 // madLib('make', 'best', 'guac');
