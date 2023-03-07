@@ -28,10 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const submission = input.value;
     input.value = '';
     
-    const ul = document.getElementById('sf-places');
-    const li = document.createElement('li');
-    li.textContent = submission;
-    ul.appendChild(li);
+    if (submission.length) {
+      const ul = document.getElementById('sf-places');
+      const li = document.createElement('li');
+      li.textContent = submission;
+      ul.appendChild(li);
+    }
   })
 
 
