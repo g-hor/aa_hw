@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const li = document.createElement('li');
     const img = document.createElement('img');
     img.src = url;
+    // img.setAttribute("src", url)
     li.appendChild(img);
     ul.appendChild(li);
   })
